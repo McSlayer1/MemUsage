@@ -15,6 +15,9 @@ time: 12962us
 
 Mem: 880 kB
 
+**\*\*Note that the output of the command you passed WILL NOT be shown in the output of the script, the main focus of this script is to find out 
+performance statistics of the command you are trying to run, and not the output of the command itself!\*\***
+
 This is still experimental so the memory may only be an APPROXIMATE value, as well as the time too. As another note, the script
 doesn't work with all commands, this can be seen when an error like
 
