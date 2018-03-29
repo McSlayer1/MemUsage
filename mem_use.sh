@@ -1,5 +1,4 @@
 #!/bin/bash
-#cd Test
 cmd=$1
 user=`whoami`
 echo "Command: $cmd"
@@ -14,11 +13,6 @@ echo "PID: $PID"
 mem=`awk 'BEGIN { used=0 }; /Rss/ { used += $2 } END { print used }' /proc/$PID/smaps`
 time2=`date +%s%6N`
 used2=`free | grep Mem | awk '{print $3}'`
-#echo $used2
-#echo $used1
-#echo $time2
-#echo $time1
 echo "time: $[time2 - time1]us"
-#echo "Mem used: ~$[used2 - used1] bytes"
 echo "Mem: $mem kB"
 pkill -f cmd_proc
