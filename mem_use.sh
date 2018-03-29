@@ -6,7 +6,7 @@ echo "Command: $cmd"
 used1=`free | grep Mem | awk '{print $3}'`
 time1=`date +%s%6N`;
 bash -c "exec $cmd > /dev/null 2>&1 &"
-echo `ps -ef | grep -P "$cmd"`
+#echo `ps -ef | grep -P "$cmd"`
 temp=`ps -ef | grep -P "$cmd"` #| awk '{print $2}'`
 IFS=' ' read -r -a array <<< "$temp"
 PID="${array[1]}"
